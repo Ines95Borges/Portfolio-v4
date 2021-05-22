@@ -1,0 +1,12 @@
+@use './colors.scss' as *;
+@use './font.scss' as *;
+
+:root{
+  --ff-inconsolata: "Inconsolata", Arial, sans-serif;
+
+  @each $category, $color in $colors{
+    @each $color-name, $color-value in $color{
+      --clr-#{$category}-#{$color-name}: #{$color-value};
+    }
+  }
+}
