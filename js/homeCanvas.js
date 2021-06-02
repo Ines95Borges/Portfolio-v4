@@ -189,7 +189,7 @@ function drawImage(){
   let imageWidth = png.width;
   let imageHeight = png.height;
 
-  const data = ctx.getImageData(canvas.width / 2 - 100, 100, canvas.width / 2 + 100, 500);
+  const data = ctx.getImageData(0, 0, canvas.width, 900);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   class ParticleImage{
@@ -261,7 +261,7 @@ function drawImage(){
 
   function animateImage() {
     requestAnimationFrame(animateImage);
-    ctx.fillStyle = neutral_10;
+    ctx.fillStyle = "rgba(0,0,0,0.00)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for(let i = 0; i < particleArrayImage.length; i++){
